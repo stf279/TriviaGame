@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+        <!--scripts-->
+        <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
+        <script src="js.js"></script>
+     
+        <!--links-->
+        <link rel="stylesheet" type="text/css" media="screen" href="./assets/css/style.css" />
+        <link href="https://fonts.googleapis.com/css?family=Rammetto+One" rel="stylesheet"> 
+    
+    <!-- Bring in our bootstrap stylesheet -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <!-- Added link to the jQuery library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+</head>
+<body>
+        <div class="container">
+                <div class="row">
+                    <div class="col-sm-3"></div> <!--Empty-->
+                    <div class="col-sm-6 title">
+
+                        <h1>Lord of the Rings Trivia Game</h1>
+
+                    </div>
+                    <div class="col-sm-3"></div> <!--Empty-->
+                </div>
+                <div class="row">
+                    <div class="col-sm-2"></div> <!--Empty-->
+                    <div class="col-sm-8">
+
+                        <div class = "content">
+
+                                <table>
+                                        <tr>
+                                            <td><button type = "input"><h2>A</h2></button></td>
+                                            <td><button type = "input"><h2>B</h2></button></td>
+                                            <td><button type = "input"><h2>C</h2></button></td>
+                                            <td><button type = "input"><h2>D</h2></button></td>
+                                        </tr>
+                                        <tr>
+                                            <td class="a"></td>
+                                            <td class="b"></td>
+                                            <td class="c"></td>
+                                            <td class="d"></td>
+                                        </tr>
+                                </table>
+
+                                <!-- <button id="button-1" class="btn btn-primary number" value="A"><h1>A</h1></button>
+                                <button id="button-2" class="btn btn-primary number" value="B"><h1>B</h1></button>
+                                <button id="button-3" class="btn btn-primary number" value="C"><h1>C</h1></button>
+                                <button id="button-3" class="btn btn-primary number" value="D"><h1>D</h1></button> -->
+
+                        </div>
+
+                    </div>
+                    <div class="col-sm-2"></div> <!--Empty-->
+                </div>
+                <div class="row">
+                    <div class="col-sm-2"></div> <!--Empty-->
+                    <div class="col-sm-4 result">
+
+                        <p>Results</p>
+                        <p>Correct: </p>
+                        <p>Incorrect: </p>
+
+                    </div>
+                    <div class="col-sm-4"></div>
+                    <div class="col-sm-2"></div> <!--Empty-->
+                </div>
+            </div>
+
+            <script>
+            
+            // create the array of questions
+            const items = [
+
+            {
+                question: "At the end of 'Return of the King', who became the king of Gondor?",
+                A: "Faramir",
+                B: "Aragorn",
+                C: "Boromir",
+                D: "Gimli"
+            }
+
+            {
+
+                question: "Who were the pther Hobbits that accompanied Frodo on the quest?",
+                A: "Happy, Dopey, and Doc",
+                B: "Athos, Porthos, and Aramis",
+                C: "Samwise Gamgee, Meriadoc Brandybuck, and Perigrin Took ",
+                D: "Larry, Moe, and Curly"
+
+            }
+
+            {
+
+                question: "What was the name of the council where it was determined who took the ring to Mordor to destroy it?",
+                A: "The Council of the 12",
+                B: "The Council of Elrond",
+                C: "Council of the Five Kingdoms",
+                D: "Forget the ring, let's get drunk!"
+
+            }
+
+            {
+
+                question: "What is the name of Frodo's sword?",
+                A: "Shard",
+                B: "Sting",
+                C: "Needle",
+                D: "Goblin's Bane"
+
+            }
+
+            {
+
+                question: "What are the seeing stones called that Gandalf discovers Sauruman to have one of?",
+                A: "a pet rock",
+                B: "a Huorn",
+                C: "an Orthac",
+                D: "a palantir"
+
+            }
+
+            ];
+
+            // create the right and wrong veriables
+            let right, wrong;
+
+            // create a function that clears the content div
+            const clearContents = function() {
+
+                $('.content').empty();
+
+                right = 0;
+                wrong = 0;
+            }
+
+            // create the loop that will add the question to the content div, and render the buttons for the answers
+            for (i=0; i<items.length; i++) {
+
+                $('.content').append(items[i].question);
+
+            // render the buttons
+                $('.a').append(items[i].A);
+                $('.b').append(items[i].B);
+                $('.c').append(items[i].C);
+                $('.d').append(items[i].D);
+            
+
+            }
+
+            
+            </script>
+    
+</body>
+</html>
+
