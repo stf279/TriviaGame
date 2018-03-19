@@ -38,23 +38,22 @@
 
                                 <table>
                                         <tr>
-                                            <td><button type = "input"><h2>A</h2></button></td>
-                                            <td><button type = "input"><h2>B</h2></button></td>
-                                            <td><button type = "input"><h2>C</h2></button></td>
-                                            <td><button type = "input"><h2>D</h2></button></td>
+                                            <td><button type = "input" value="a"><h3>A</h3></button></td>
+                                            <td class="a"></td>
                                         </tr>
                                         <tr>
-                                            <td class="a"></td>
+                                            <td><button type = "input" value="b"><h3>B</h3></button></td>
                                             <td class="b"></td>
+                                        </tr>
+                                        <tr>
+                                            <td><button type = "input" value="c"><h3>C</h3></button></td>
                                             <td class="c"></td>
+                                        </tr>
+                                        <tr>
+                                            <td><button type = "input" value="d"><h3>D</h3></button></td>
                                             <td class="d"></td>
                                         </tr>
                                 </table>
-
-                                <!-- <button id="button-1" class="btn btn-primary number" value="A"><h1>A</h1></button>
-                                <button id="button-2" class="btn btn-primary number" value="B"><h1>B</h1></button>
-                                <button id="button-3" class="btn btn-primary number" value="C"><h1>C</h1></button>
-                                <button id="button-3" class="btn btn-primary number" value="D"><h1>D</h1></button> -->
 
                         </div>
 
@@ -66,80 +65,26 @@
                     <div class="col-sm-4 result">
 
                         <p>Results</p>
-                        <p>Correct: </p>
-                        <p>Incorrect: </p>
+                        <p class="right">Correct: </p>
+                        <p class="wrong">Incorrect: </p>
 
                     </div>
-                    <div class="col-sm-4"></div>
+                    <div class="col-sm-4 timer"></div>
                     <div class="col-sm-2"></div> <!--Empty-->
                 </div>
             </div>
 
             <script>
             
-            // create the array of questions
-            const items = [
-
-            {
-                question: "At the end of 'Return of the King', who became the king of Gondor?",
-                A: "Faramir",
-                B: "Aragorn",
-                C: "Boromir",
-                D: "Gimli"
-            }
-
-            {
-
-                question: "Who were the pther Hobbits that accompanied Frodo on the quest?",
-                A: "Happy, Dopey, and Doc",
-                B: "Athos, Porthos, and Aramis",
-                C: "Samwise Gamgee, Meriadoc Brandybuck, and Perigrin Took ",
-                D: "Larry, Moe, and Curly"
-
-            }
-
-            {
-
-                question: "What was the name of the council where it was determined who took the ring to Mordor to destroy it?",
-                A: "The Council of the 12",
-                B: "The Council of Elrond",
-                C: "Council of the Five Kingdoms",
-                D: "Forget the ring, let's get drunk!"
-
-            }
-
-            {
-
-                question: "What is the name of Frodo's sword?",
-                A: "Shard",
-                B: "Sting",
-                C: "Needle",
-                D: "Goblin's Bane"
-
-            }
-
-            {
-
-                question: "What are the seeing stones called that Gandalf discovers Sauruman to have one of?",
-                A: "a pet rock",
-                B: "a Huorn",
-                C: "an Orthac",
-                D: "a palantir"
-
-            }
-
-            ];
-
-            // create the right and wrong veriables
-            let right, wrong;
+           
 
             // create a function that clears the content div
             const clearContents = function() {
 
                 $('.content').empty();
 
-                right = "";
-                wrong = "";
+                right = 0;
+                wrong = 0;
             }
 
             // create the loop that will add the question to the content div, and render the buttons for the answers
