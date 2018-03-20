@@ -7,6 +7,8 @@
     <title>Document</title>
 
         <!--scripts-->
+        <!-- Added link to the jQuery library -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
         <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
         <script src="./assets/javascript/js.js"></script>
      
@@ -16,8 +18,7 @@
     
     <!-- Bring in our bootstrap stylesheet -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
-    <!-- Added link to the jQuery library -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    
 </head>
 <body>
         <div class="container">
@@ -36,24 +37,26 @@
 
                         <div class = "content">
 
-                                <table>
-                                        <tr>
-                                            <td><button type = "input" class = "button" value="a"><h3>A</h3></button></td>
-                                            <td class="a"></td>
-                                        </tr>
-                                        <tr>
-                                            <td><button type = "input" class = "button" value="b"><h3>B</h3></button></td>
-                                            <td class="b"></td>
-                                        </tr>
-                                        <tr>
-                                            <td><button type = "input"  class = "button"value="c"><h3>C</h3></button></td>
-                                            <td class="c"></td>
-                                        </tr>
-                                        <tr>
-                                            <td><button type = "input" class = "button" value="d"><h3>D</h3></button></td>
-                                            <td class="d"></td>
-                                        </tr>
-                                </table>
+                            <p class="questions"></p>
+
+                            <table>
+                                <tr>
+                                    <td><button type = "input" class = "button" value="a"><h3>A</h3></button></td>
+                                    <td class="a"></td>
+                                </tr>
+                                <tr>
+                                    <td><button type = "input" class = "button" value="b"><h3>B</h3></button></td>
+                                    <td class="b"></td>
+                                </tr>
+                                <tr>
+                                    <td><button type = "input"  class = "button"value="c"><h3>C</h3></button></td>
+                                    <td class="c"></td>
+                                </tr>
+                                <tr>
+                                    <td><button type = "input" class = "button" value="d"><h3>D</h3></button></td>
+                                    <td class="d"></td>
+                                    </tr>
+                            </table>
 
                         </div>
 
@@ -65,8 +68,8 @@
                     <div class="col-sm-4 result">
 
                         <p>Results</p>
-                        <p class="right">Correct: </p>
-                        <p class="wrong">Incorrect: </p>
+                        <p class="right"></p>
+                        <p class="wrong"></p>
 
                     </div>
                     <div class="col-sm-4 timer"></div>

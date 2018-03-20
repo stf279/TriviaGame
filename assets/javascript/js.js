@@ -50,30 +50,30 @@ $(document).ready(function() {
     
         
     
-    let right, wrong;
+    let r = 0, w = 0;
 
     function right() {
-        right++;
+        r++;
         alert("Correct!");
         console.log("correct");
     }
 
     function wrong() {
-        wrong++;
+        w++;
         alert("Incorrect!");
         console.log("incorrect");
     }
 
     function outOfTime() {
-        wrong++;
+        w++;
         console.log("incorrect");
     }
 
     function score() {
         $('.right').empty();
         $('.wrong').empty();
-        $('.right').append("<h3>" + right + "</h3>");
-        $('.wrong').append("<h3>" + wrong + "</h3>");
+        $('.right').append("<h3>Correct: " + r + "</h3>");
+        $('.wrong').append("<h3>Incorrect: " + w + "</h3>");
         countdownTimer.stop();
         $('.timer').empty();
 	    
@@ -81,37 +81,38 @@ $(document).ready(function() {
 
     function start() {
 
+        $('.questions').empty();
 
+        for (let i = 0; i < items.question.length; i++) {
 
-    }
+        $('.questions').append("<p>" + items.question[i] + "</p>");
+        $('.a').append(items.A[i]);
+        $('.b').append(items.B[i]);
+        $('.c').append(items.C[i]);
+        $('.d').append(items.D[i]);
 
-    $('.content').empty();
-    $('.content').append("<p>" + items[0].question + "</p>");
-    $('.a').empty();
-    $('.b').empty();
-    $('.c').empty();
-    $('.d').empty();
-    $('.a').append(items[0].A);
-    $('.b').append(items[0].B);
-    $('.c').append(items[0].C);
-    $('.d').append(items[0].D);
+        $('.button').on('click', function() {
 
-    $('.button').on('click', function() {
+            if ($(this).val() == items.rightAnswer[i]) {
 
-        if (this.val() == items.rightAnswer) {
+                    r++;
+                    console.log(r);
+                    console.log(w);
+                    score();
 
-            right++;
-            console.log(right);
-            console.log(wrong);
+            } else {
 
-        } else {
+                    w++;
+                    console.log(r);
+                    console.log(w);
+                    score();
 
-            wrong++;
-            console.log(right);
-            console.log(wrong);
+            }
+
+            });
 
         }
-
-    });
-
+    }
+    
+start();
 });
