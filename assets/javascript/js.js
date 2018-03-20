@@ -81,10 +81,15 @@ $(document).ready(function() {
 
     function start() {
 
-        $('.questions').empty();
+        
 
         for (let i = 0; i < items.question.length; i++) {
-
+        $('.questions').empty();
+        $('.a').empty();
+        $('.b').empty();
+        $('.c').empty();
+        $('.d').empty();
+        countdownTimer.reset();
         $('.questions').append("<p>" + items.question[i] + "</p>");
         $('.a').append(items.A[i]);
         $('.b').append(items.B[i]);
@@ -93,19 +98,31 @@ $(document).ready(function() {
 
         $('.button').on('click', function() {
 
+            countdownTimer.start();
+
             if ($(this).val() == items.rightAnswer[i]) {
 
                     r++;
                     console.log(r);
                     console.log(w);
                     score();
+                    countdownTimer.reset();
 
-            } else {
+            } else if (countdownTimer.time == 0) {
 
                     w++;
                     console.log(r);
                     console.log(w);
                     score();
+                    countdownTimer.reset();
+
+            } else {
+
+                w++;
+                console.log(r);
+                console.log(w);
+                score();
+                countdownTimer.reset();
 
             }
 
