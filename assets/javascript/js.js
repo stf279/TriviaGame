@@ -2,9 +2,9 @@
 
 $(document).ready(function() {
 
-    var index = 0;
+    let index = 0;
     let counter =0;
-	var countdownTimer = {
+	let countdownTimer = {
 		time : 30,
 		reset: function() {
 			this.time = 10;
@@ -37,62 +37,18 @@ $(document).ready(function() {
 		}
 	};
 
-    const items = [
+    let items = 
 
         {
-            question: "At the end of 'Return of the King', who became the king of Gondor?",
-            A: "Faramir",
-            B: "Aragorn",
-            C: "Boromir",
-            D: "Gimli",
-            rightAnswer: "b"
-        }
+            question: ["At the end of 'Return of the King', who became the king of Gondor?", "Who were the other Hobbits that accompanied Frodo on the quest?", "What was the name of the council where it was determined who took the ring to Mordor to destroy it?", "What is the name of Frodo's sword?", "What are the seeing stones called that Gandalf discovers Sauruman to have one of?"],
+            A: ["Faramir","Happy, Dopey, and Doc","The Council of the 12","Shard","a pet rock"],
+            B: ["Aragorn","Athos, Porthos, and Aramis","The Council of Elrond","Sting","a Huorn"],
+            C: ["Boromir","Samwise Gamgee, Meriadoc Brandybuck, and Perigrin Took ","Council of the Five Kingdoms","Needle","an Orthac"],
+            D: ["Gimli","Larry, Moe, and Curly","Forget the ring, let's get drunk!","Goblin's Bane","a palantir"],
+            rightAnswer: ["b", "c", "b", "b", "d"]
+        };
     
-        {
-    
-            question: "Who were the pther Hobbits that accompanied Frodo on the quest?",
-            A: "Happy, Dopey, and Doc",
-            B: "Athos, Porthos, and Aramis",
-            C: "Samwise Gamgee, Meriadoc Brandybuck, and Perigrin Took ",
-            D: "Larry, Moe, and Curly",
-            rightAnswer: "c"
-    
-        }
-    
-        {
-    
-            question: "What was the name of the council where it was determined who took the ring to Mordor to destroy it?",
-            A: "The Council of the 12",
-            B: "The Council of Elrond",
-            C: "Council of the Five Kingdoms",
-            D: "Forget the ring, let's get drunk!",
-            rightAnswer: "b"
-    
-        }
-    
-        {
-    
-            question: "What is the name of Frodo's sword?",
-            A: "Shard",
-            B: "Sting",
-            C: "Needle",
-            D: "Goblin's Bane",
-            rightAnswer: "b"
-    
-        }
-    
-        {
-    
-            question: "What are the seeing stones called that Gandalf discovers Sauruman to have one of?",
-            A: "a pet rock",
-            B: "a Huorn",
-            C: "an Orthac",
-            D: "a palantir",
-            rightAnswer: "d"
-    
-        }
-    
-        ];
+        
     
     let right, wrong;
 
@@ -120,20 +76,42 @@ $(document).ready(function() {
         $('.wrong').append("<h3>" + wrong + "</h3>");
         countdownTimer.stop();
         $('.timer').empty();
-	    // $('.question').append('<button id="startButton">Start</button>');
-	    $('#startButton').on('click', function() {
-        index = 0;
-		$(this).hide();
-		countdownTimer.start();
-        initQ(index);
-        incorrect=0;
-        correct=0;
-        $('.right').empty();
-        $('.wrong').empty();
-	});	
+	    
+    }
+
+    function start() {
+
+
 
     }
 
+    $('.content').empty();
+    $('.content').append("<p>" + items[0].question + "</p>");
+    $('.a').empty();
+    $('.b').empty();
+    $('.c').empty();
+    $('.d').empty();
+    $('.a').append(items[0].A);
+    $('.b').append(items[0].B);
+    $('.c').append(items[0].C);
+    $('.d').append(items[0].D);
 
+    $('.button').on('click', function() {
 
-}
+        if (this.val() == items.rightAnswer) {
+
+            right++;
+            console.log(right);
+            console.log(wrong);
+
+        } else {
+
+            wrong++;
+            console.log(right);
+            console.log(wrong);
+
+        }
+
+    });
+
+});

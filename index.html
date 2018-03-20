@@ -8,7 +8,7 @@
 
         <!--scripts-->
         <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
-        <script src="js.js"></script>
+        <script src="./assets/javascript/js.js"></script>
      
         <!--links-->
         <link rel="stylesheet" type="text/css" media="screen" href="./assets/css/style.css" />
@@ -38,19 +38,19 @@
 
                                 <table>
                                         <tr>
-                                            <td><button type = "input" value="a"><h3>A</h3></button></td>
+                                            <td><button type = "input" class = "button" value="a"><h3>A</h3></button></td>
                                             <td class="a"></td>
                                         </tr>
                                         <tr>
-                                            <td><button type = "input" value="b"><h3>B</h3></button></td>
+                                            <td><button type = "input" class = "button" value="b"><h3>B</h3></button></td>
                                             <td class="b"></td>
                                         </tr>
                                         <tr>
-                                            <td><button type = "input" value="c"><h3>C</h3></button></td>
+                                            <td><button type = "input"  class = "button"value="c"><h3>C</h3></button></td>
                                             <td class="c"></td>
                                         </tr>
                                         <tr>
-                                            <td><button type = "input" value="d"><h3>D</h3></button></td>
+                                            <td><button type = "input" class = "button" value="d"><h3>D</h3></button></td>
                                             <td class="d"></td>
                                         </tr>
                                 </table>
@@ -73,37 +73,13 @@
                     <div class="col-sm-2"></div> <!--Empty-->
                 </div>
             </div>
-
-            <script>
-            
-           
-
-            // create a function that clears the content div
-            const clearContents = function() {
-
-                $('.content').empty();
-
-                right = 0;
-                wrong = 0;
-            }
-
-            // create the loop that will add the question to the content div, and render the buttons for the answers
-            for (i=0; i<items.length; i++) {
-
-                $('.content').append(items[i].question);
-
-            // render the buttons
-                $('.a').append(items[i].A);
-                $('.b').append(items[i].B);
-                $('.c').append(items[i].C);
-                $('.d').append(items[i].D);
-            
-
-            }
-
-            
-            </script>
     
+            <!-- Script CDNs -->
+        <!-- Bootstrap -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+        <script type="text/javascript" src="https://code.jquery.com/jquery-2.2.0.js"></script>
+                
 </body>
 </html>
 
