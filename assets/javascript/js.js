@@ -81,7 +81,9 @@ $(document).ready(function() {
 
     function start() {
 
-        
+// the timer is still not working, and the last question is the only one that shows up. 
+// trying to get that all to work
+// otherwise the score is working        
 
         for (let i = 0; i < items.question.length; i++) {
         $('.questions').empty();
